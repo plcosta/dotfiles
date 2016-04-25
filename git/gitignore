@@ -1,0 +1,53 @@
+# Useful `.gitignore` templates:
+# https://github.com/github/gitignore
+
+# Linux
+*~
+
+# Mac OS X
+._*
+.AppleDouble
+.DS_Store
+.localized
+.LSOverride
+.Spotlight-V100
+.Trashes
+Icon
+
+# Vim
+%*
+*.sw[a-z]
+*.un~
+.netrwhist
+Session.vim
+
+# Windows
+Desktop.ini
+ehthumbs.db
+Thumbs.db
+
+# Rails
+*.rbc
+capybara-*.html
+.rspec
+/log
+/tmp
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/public/system
+/coverage/
+/spec/tmp
+**.orig
+rerun.txt
+pickle-email-*.html
+config/initializers/secret_token.rb
+config/secrets.yml
+/.bundle
+/vendor/bundle
+.ruby-version
+.ruby-gemset
+.rvmrc
+/vendor/assets/bower_components
+*.bowerrc
+bower.json
+.powenv
