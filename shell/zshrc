@@ -43,7 +43,8 @@ ZSH_THEME="robbyrussell"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+#ZSH_CUSTOM=$HOME/.dotfiles/shell/bash_aliases
+source $HOME/.dotfiles/shell/bash_aliases
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -77,5 +78,6 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
-source ~/.dotfiles/shell/bash_aliases
+source $HOME/.dotfiles/shell/bash_aliases
+
 eval "$(rbenv init -)"
