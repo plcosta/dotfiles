@@ -2,6 +2,7 @@
 
 ZDOTDIR=$HOME/.dotfiles/shell
 HOMESTEAD="$HOME/.homestead"
+CODE="$HOME/Code"
 
 
 alias f5="source ~/.zshrc"
@@ -219,6 +220,33 @@ homestead () {
     elif [[ $1 == "ssh" ]]; then
         cd $HOMESTEAD
         vagrant ssh
+    elif [[ $1 == "halt" ]]; then
+        cd $HOMESTEAD
+        vagrant halt
+    else
+        return 1
+    fi
+
+}
+
+# ----------------------------------------------------------------------
+# | Hospub                                          |
+# ----------------------------------------------------------------------
+
+hospub () {
+
+    if [[ $1 == "up" ]]; then
+        cd $CODE
+        vagrant up hospub
+    elif [[ $1 == "suspend" ]]; then
+        cd $CODE
+        vagrant suspend hospub
+    elif [[ $1 == "ssh" ]]; then
+        cd $CODE
+        vagrant ssh hospub
+    elif [[ $1 == "halt" ]]; then
+        cd $CODE
+        vagrant halt hospub
     else
         return 1
     fi
