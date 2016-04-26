@@ -1,35 +1,8 @@
 #!/bin/zsh
 
-declare homesteadDirectory="$HOME/.homestead"
+ZDOTDIR=$HOME/.dotfiles/shell
+HOMESTEAD="$HOME/.homestead"
 
-execute() {
-    $1 &> /dev/null
-    print_result $? "${2:-$1}"
-}
-
-print_result() {
-    [ $1 -eq 0 ] \
-        && print_success "$2" \
-        || print_error "$2"
-
-    [ "$3" == "true" ] && [ $1 -ne 0 ] \
-        && exit
-}
-
-print_error() {
-    # Print output in red
-    printf "\e[0;31m  [✖] $1 $2\e[0m\n"
-}
-
-print_info() {
-    # Print output in purple
-    printf "\n\e[0;35m $1\e[0m\n\n"
-}
-
-print_question() {
-    # Print output in yellow
-    printf "\e[0;33m  [?] $1\e[0m"
-}
 
 alias f5="source ~/.zshrc"
 
@@ -226,7 +199,7 @@ alias code="atom . && stree && open -a ~/Applications/Google\ Chrome.app 'http:/
 # ----------------------------------------------------------------------
 # | Tunneling / External tools                                         |
 # ----------------------------------------------------------------------
-tunnel() {
+function tunnel() {
   "/usr/local/bin/lt --port $1"
 }
 
@@ -236,12 +209,16 @@ tunnel() {
 # ----------------------------------------------------------------------
 
 homestead () {
+
     if [[ $1 == "up" ]]; then
-        "cd $homesteadDirectory"
-        "/usr/local/bin/vagrant up"
+        cd $HOMESTEAD
+        vagrant up
     elif [[ $1 == "suspend" ]]; then
-        "cd $homesteadDirectory"
-        "/usr/local/bin/vagrant suspend"
+        cd $HOMESTEAD
+        vagrant suspend
+    elif [[ $1 == "ssh" ]]; then
+        cd $HOMESTEAD
+        vagrant ssh
     else
         return 1
     fi

@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/plcosta/.oh-my-zsh
+ZDOTDIR=$HOME/.dotfiles/shell
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -44,7 +45,6 @@ ZSH_THEME="robbyrussell"
 
 # Would you like to use another custom folder than $ZSH/custom?
 #ZSH_CUSTOM=$HOME/.dotfiles/shell/bash_aliases
-source $HOME/.dotfiles/shell/bash_aliases
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -78,6 +78,6 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
-source $HOME/.dotfiles/shell/bash_aliases
+source "$ZDOTDIR/aliases.sh"
 
 eval "$(rbenv init -)"
