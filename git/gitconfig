@@ -52,7 +52,7 @@
     attributesfile = ~/.gitattributes
     autocrlf = input
     editor = vim
-    excludesfile = ~/.gitignore
+	excludesfile = /Users/plcosta/.gitignore
 
 [pretty]
     custom = "%C(magenta)%h%C(red)%d %C(yellow)%ar %C(green)%s %C(yellow)(%an)"
@@ -64,3 +64,9 @@
 [user]
 	name = Pedro Costa
 	email = pedro@plcosta.com
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.2.4/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
