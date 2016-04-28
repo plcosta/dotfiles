@@ -88,6 +88,11 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 alias local-ip="ipconfig getifaddr en1"
 
+# ----------------------------------------------------------------------# | Postgresql with Brew
+# ----------------------------------------------------------------------
+
+alias pgstart="brew services start postgresql"
+alias pgstop="brew services stop postgresql"
 
 # ----------------------------------------------------------------------
 # | Package Managers                                                   |
