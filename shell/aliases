@@ -9,70 +9,12 @@ CODE="$HOME/Code"
 # ----------------------------------------------------------------------
 alias f5="source ~/.zshrc"
 
-# ----------------------------------------------------------------------
-# | Navigation                                                         |
-# ----------------------------------------------------------------------
-
-alias ~="cd ~"
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias cd..="cd .."
-alias codedir="cd $HOME/Code"
-
-# ----------------------------------------------------------------------
-# | Git                                                                |
-# ----------------------------------------------------------------------
-
-alias gba="git branch -a"
-alias gcm="git checkout master"
-alias glpp="git log --pretty=oneline"
-alias gs="git status"
-alias gd="git diff"
-alias gp="git pull"
-alias gci="git commit --interactive"
-alias ga="git add"
-alias gmt="git mergetool"
-alias gpom="git push origin master"
-alias gpsm="git push staging master"
-alias gppm="git push production master"
-alias gr="git rebase -i HEAD~10"
-alias gc="git commit -m "
-alias gri="git add --all && git commit -m 'WIP' && git rebase -i HEAD~10"
-alias rebase_master="git checkout master && git pull origin master && git checkout - && git rebase master"
-alias rebase_staging="git checkout staging && git pull origin staging && git checkout - && git rebase staging"
-alias merge_master="git checkout master && git pull --rebase && git checkout - && git rebase master && git checkout master && git merge -"
-alias delete_merged="git branch --merged | grep -v '^* master$' | grep -v '^  master$' | grep -v '^* staging$' | grep -v '^  staging$' | xargs git branch -d"
-alias clean_branches="git checkout master && git pull origin master &&  git checkout staging && git pull origin staging && git remote update --prune && delete_merged"
 
 # ----------------------------------------------------------------------
 # | Laravel                                                            |
 # ----------------------------------------------------------------------
-alias pa="php artisan"
+alias pa="php artisan";
 alias pas="php artisan serve"
-
-# ----------------------------------------------------------------------
-# | Rails                                                              |
-# ----------------------------------------------------------------------
-
-alias rc="bin/rails c"
-alias rs="bin/rails s"
-alias routes="bin/rake routes"
-alias gib="gem install bundler"
-alias gibp="gem install bundler --pre"
-alias bi="bundle install"
-alias bu="bundle update"
-alias bx="bundle exec"
-alias bs="bundle exec rspec"
-alias bir="bundle install --relock"
-alias brake="bin/rake"
-alias brails="bin/rails"
-alias migrate="bin/rake db:migrate"
-alias rspec="bundle exec rspec"
-alias thin="bundle exec thin"
-alias remakedb="bin/rake db:drop db:create db:migrate && bin/rake db:seed"
-alias remaketest="bin/rake db:drop db:create db:migrate RAILS_ENV=test"
-alias remakedbs="bin/rake db:drop db:create db:migrate && bin/rake db:seed && bin/rake db:drop db:create db:migrate RAILS_ENV=test"
 
 # ----------------------------------------------------------------------
 # | Heroku                                                             |
@@ -203,13 +145,6 @@ alias o="open"
 
 alias use-node="brew unlink iojs && brew link --force node"
 alias use-iojs="brew unlink node && brew link --force iojs"
-
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# Open sublime and SourceTree
-
-alias code="atom . && stree && open -a ~/Applications/Google\ Chrome.app 'http://localhost:3000' && rs"
 
 
 # ----------------------------------------------------------------------
