@@ -51,6 +51,7 @@ alias clean_branches="git checkout master && git pull origin master &&  git chec
 
 alias rc="bin/rails c"
 alias rs="bin/rails s"
+alias routes="bin/rake routes"
 alias gib="gem install bundler"
 alias gibp="gem install bundler --pre"
 alias bi="bundle install"
