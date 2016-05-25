@@ -46,6 +46,12 @@ alias delete_merged="git branch --merged | grep -v '^* master$' | grep -v '^  ma
 alias clean_branches="git checkout master && git pull origin master &&  git checkout staging && git pull origin staging && git remote update --prune && delete_merged"
 
 # ----------------------------------------------------------------------
+# | Laravel                                                            |
+# ----------------------------------------------------------------------
+alias pa="php artisan"
+alias pas="php artisan serve"
+
+# ----------------------------------------------------------------------
 # | Rails                                                              |
 # ----------------------------------------------------------------------
 
