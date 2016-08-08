@@ -52,7 +52,7 @@ ZSH_THEME="honukai"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew battery git bundler composer laravel capistrano osx rake rails postgres rbenv git-extas gem ruby lol colorize copydir copyfile command-not-found extract web-search node npm nvm cp tugboat urltools jsontools tmux)
+plugins=(zsh-autosuggestions brew battery git bundler composer laravel docker capistrano osx rake rails postgres rbenv git-extas gem ruby lol colorize copydir copyfile command-not-found extract web-search node npm nvm cp tugboat urltools jsontools tmux)
 
 # User configuration
 
@@ -81,5 +81,6 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
 source "$ZDOTDIR/aliases"
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 eval "$(rbenv init -)"
