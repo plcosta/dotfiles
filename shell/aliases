@@ -11,6 +11,17 @@ alias f5="source ~/.zshrc"
 
 
 # ----------------------------------------------------------------------
+# | Ruby / Rails
+# ----------------------------------------------------------------------
+alias b="bundle"
+alias bi="bundle install --path vendor"
+alias biv="bundle install --path vendor"
+alias bp="bundle package"
+alias binit="bi && echo 'vendor/ruby' >> .gitignore"
+alias bu="b update"
+alias be="b exec"
+
+# ----------------------------------------------------------------------
 # | Laravel                                                            |
 # ----------------------------------------------------------------------
 alias pa="php artisan";
