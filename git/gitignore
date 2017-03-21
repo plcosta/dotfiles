@@ -51,3 +51,6 @@ config/secrets.yml
 *.bowerrc
 bower.json
 .powenv
+
+# Jetbrains 
+.idea/
