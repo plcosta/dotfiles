@@ -5,6 +5,16 @@ HOMESTEAD="$HOME/.homestead"
 CODE="$HOME/Code"
 
 # ----------------------------------------------------------------------
+# | Navigation                                                         |
+# ----------------------------------------------------------------------
+
+alias ~="cd ~"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias cd..="cd .."
+
+# ----------------------------------------------------------------------
 # | Update                                                         |
 # ----------------------------------------------------------------------
 alias f5="source ~/.zshrc"
@@ -13,13 +23,23 @@ alias puma-stop="pkill -USR1 puma-dev"
 # ----------------------------------------------------------------------
 # | Ruby / Rails
 # ----------------------------------------------------------------------
-alias b="bundle"
-alias bi="bundle install --path vendor"
-alias biv="bundle install --path vendor"
 alias bp="bundle package"
-alias binit="bi && echo 'vendor/ruby' >> .gitignore"
-alias bu="b update"
-alias be="b exec"
+alias rs="bin/rails s"
+alias gib="gem install bundler"
+alias gibp="gem install bundler --pre"
+alias bi="bundle install"
+alias bu="bundle update"
+alias bx="bundle exec"
+alias bs="bundle exec rspec"
+alias bir="bundle install --relock"
+alias rake="bin/rake"
+alias rails="bin/rails"
+alias migrate="bin/rake db:migrate"
+alias rspec="bundle exec rspec"
+alias thin="bundle exec thin"
+alias remakedb="bin/rake db:drop db:create db:migrate && bin/rake db:seed"
+alias remaketest="bin/rake db:drop db:create db:migrate RAILS_ENV=test"
+alias remakedbs="bin/rake db:drop db:create db:migrate && bin/rake db:seed && bin/rake db:drop db:create db:migrate RAILS_ENV=test"
 
 # ----------------------------------------------------------------------
 # | Laravel                                                            |
