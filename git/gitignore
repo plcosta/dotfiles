@@ -1,57 +1,47 @@
-# Useful `.gitignore` templates:
-# https://github.com/github/gitignore
-
-# Linux
-*~
-
-# Mac OS X
-._*
-.AppleDouble
+# OSX       taken from: https://github.com/github/gitignore/blob/master/Global/OSX.gitignore
+# ----------------------------------------------------------------------------------------------
 .DS_Store
-.localized
-.LSOverride
+# Thumbnails
+._*
+# Files that might appear on external disk
 .Spotlight-V100
 .Trashes
-Icon
 
-# Vim
-%*
-*.sw[a-z]
-*.un~
-.netrwhist
-Session.vim
-
-# Windows
-Desktop.ini
-ehthumbs.db
+# Windows   taken from: https://github.com/github/gitignore/blob/master/Global/Windows.gitignore
+# ----------------------------------------------------------------------------------------------
+# Windows image file caches
 Thumbs.db
 
-# Rails
-*.rbc
-capybara-*.html
-.rspec
-/log
-/tmp
-/db/*.sqlite3
-/db/*.sqlite3-journal
-/public/system
-/coverage/
-/spec/tmp
-**.orig
-rerun.txt
-pickle-email-*.html
-config/initializers/secret_token.rb
-config/secrets.yml
-/.bundle
-/vendor/bundle
-.ruby-version
-.ruby-gemset
-.rvmrc
-/vendor/assets/bower_components
-*.bowerrc
-bower.json
-.powenv
+# Folder config file
+Desktop.ini
 
-# Editors 
-.idea/
-.vscode/
+# Tags      taken from: https://github.com/github/gitignore/blob/master/Global/Tags.gitignore
+# ----------------------------------------------------------------------------------------------
+# Ignore tags created by etags, ctags, gtags (GNU global) and cscope
+TAGS
+!TAGS/
+tags
+!tags/
+.tags
+.tags1
+gtags.files
+GTAGS
+GRTAGS
+GPATH
+cscope.files
+cscope.out
+cscope.in.out
+cscope.po.out
+
+# Vim       taken from: https://github.com/github/gitignore/blob/master/Global/vim.gitignore
+# ----------------------------------------------------------------------------------------------
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# SASS
+# ----------------------------------------------------------------------------------------------
+.sass-cache
